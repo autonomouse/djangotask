@@ -157,6 +157,7 @@ class Tasks(TaskBase):
         self.manage(["collectstatic", "--noinput"])
         self.manage(["makemigrations"])
         self.manage(["migrate"])
+        #self.manage(["loaddata", "fake_data.yaml"])
         self.manage(["runserver"])
 
     def test(self):

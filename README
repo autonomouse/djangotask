@@ -1,5 +1,16 @@
 Install dependencies by running the followng command:
 
-$ ./do.py install_deps
+$ ./do.py install
+
+Load up test fixtures, run the required migrations, etc and fire up runserver using:
+
+$ ./do.py dev
 
 N.B. This assumes you have python3 already installed.
+
+Sorry, I know I'm supposed to use VirtualEnv and run using pip install, but didn't see this requirement until the end. I'm used to running things in a system container (i.e. LXC/LXD) and it was beaten into me at Canonical that apt >>> pip and to never use pip if it can be avoided. 
+
+I can add this later on if you like, but I figured you'd like to have the code sooner rather than later.
+
+Defualt DB credentials are admin/password123 
+
