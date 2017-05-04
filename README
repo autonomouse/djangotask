@@ -1,6 +1,6 @@
 This task is written in python3 using django version 1.8.7
 
-While the task documentation requested the use of VirtualEnv and for it to be run using pip install, which can be done via:
+The task documentation requested the use of VirtualEnv and for it to be run using pip install, which can be done via:
 
 $ pip3 install -r requirements.txt
 
@@ -12,9 +12,12 @@ To load up test fixtures, run the required migrations, etc and fire up runserver
 
 $ ./do.py dev
 
-N.B. The do.py file only assumes that you have python3 already installed and ar eusing an apt based system, such as Ubuntu.
+(The bundled DB has all this done already though, so if you like you can just run runserver)
 
-The website will then be available at :
+N.B. The do.py file only assumes that you have python3 already installed and are using an apt based system, such as Ubuntu.
+
+
+The website will now be available at :
 http://127.0.0.1:8000/
 
 The DRF REST API browser is available at:
