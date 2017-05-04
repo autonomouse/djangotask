@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en" data-ng-app="incling">
+    <head>
+        <meta charset="utf-8"> <!-- Do not change charset please - utf-8 is important for d3.js -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta name="author" content="Darren Hoyland" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <![endif]-->
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+        <title>{{ app_name }}</title>
+    </head>
+
+    <body>
+        <div id="content-view" data-ng-view></div>
+
+        <section class="footer">
+            <p>&copy; {{ TMYear }} {{ authors }} (Current website version: {{ version }})</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+<script type="text/javascript" src="{% static 'node_modules/angular/angular.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/angular-route/angular-route.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/angular-cookies/angular-cookies.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/angular-resource/angular-resource.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/configs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/directives.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/controllers.js' %}"></script>

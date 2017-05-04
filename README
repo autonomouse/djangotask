@@ -1,0 +1,5 @@
+Install dependencies by running the followng command:
+
+$ ./do.py install_deps
+
+N.B. This assumes you have python3 already installed.
