@@ -113,30 +113,10 @@ class Tasks(TaskBase):
 
     def install(self):
         self.apt([
-            "python3",
-            "python3-psycopg2",
-            "python3-psutil",
-            "python3-postgresql",
-            "python3-django",
-            "python3-djangorestframework",
-            "python3-django-extensions",
-            "python3-dateutil",
-            "python3-requests",
-            "python3-flake8",
-            "python3-pytest",
-            "python3-freezegun",
             "python3-pip",
-            "python3-arrow",
-            "python3-pyparsing",
             "python3-pydot",
-            "nginx-full",
-            "gunicorn3",
-            "npm",
-            "psutils",
-            "postgresql-contrib",
-            "postgresql-9.5",
-            "python3-sqlparse",
-            "python3-pytest", ])
+            "python3-venv",
+            "npm", ])
         self.npm([
             "d3@3.5.17",
             "nvd3@1.8.3",
@@ -148,7 +128,21 @@ class Tasks(TaskBase):
             "jquery@3.1.1",
             "bootstrap@3.3.7", ])
         self.pip([
-            "django-filter",
+            "Django==1.8.7",
+            "django-extensions==1.7.8",
+            "django-filter==1.0.2",
+            "djangorestframework==3.6.2",
+            "flake8==3.3.0",
+            "mccabe==0.6.1",
+            "py==1.4.33",
+            "pycodestyle==2.3.1",
+            "pyflakes==1.5.0",
+            "pyparsing==2.2.0",
+            "pytest==3.0.7",
+            "pytz==2017.2",
+            "requests==2.13.0",
+            "selenium==3.0.0b3",
+            "six==1.10.0",
             "selenium==3.0.0b3", ])
         self.install_browser_drivers()
         print("Done")

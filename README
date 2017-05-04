@@ -1,24 +1,26 @@
-Install dependencies by running the followng command:
+This task is written in python3 using django version 1.8.7
+
+While the task documentation requested the use of VirtualEnv and for it to be run using pip install, which can be done via:
+
+$ pip3 install -r requirements.txt
+
+However, it also uses npm. These have been pre-installed into the node_modules folder, but both of the above tasks should be doable by running the followng command:
 
 $ ./do.py install
 
-Load up test fixtures, run the required migrations, etc and fire up runserver using:
+To load up test fixtures, run the required migrations, etc and fire up runserver in one line, please use:
 
 $ ./do.py dev
 
-N.B. This assumes you have python3 already installed.
+N.B. The do.py file only assumes that you have python3 already installed and ar eusing an apt based system, such as Ubuntu.
 
-Sorry, I know I'm supposed to use VirtualEnv and run using pip install, but didn't see this requirement until the end. I'm used to running things in a system container (i.e. LXC/LXD) and it was beaten into me at Canonical that apt >>> pip and to never use pip if it can be avoided. 
-
-I can add this later on if you like, but I figured you'd like to have the code sooner rather than later.
-
+The website will then be available at :
+http://127.0.0.1:8000/
 
 The DRF REST API browser is available at:
 http://127.0.0.1:8000/api/v0/
 
-
 The admin page is available at:
-
 http://127.0.0.1:8000/admin/
 
 If using the included db.sqlite3 database, the defualt DB credentials are admin/password123 (If you've deleted that and are starting from scratch, you will have to run python3 manage.py createsuperuser)
