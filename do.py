@@ -132,17 +132,11 @@ class Tasks(TaskBase):
             "django-extensions==1.7.8",
             "django-filter==1.0.2",
             "djangorestframework==3.6.2",
-            "flake8==3.3.0",
-            "mccabe==0.6.1",
-            "py==1.4.33",
-            "pycodestyle==2.3.1",
-            "pyflakes==1.5.0",
+            "flake8==3.2.1",
             "pyparsing==2.2.0",
             "pytest==3.0.7",
             "pytz==2017.2",
             "requests==2.13.0",
-            "selenium==3.0.0b3",
-            "six==1.10.0",
             "selenium==3.0.0b3", ])
         self.install_browser_drivers()
         print("Done")
