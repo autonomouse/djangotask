@@ -27,15 +27,6 @@ app.controller('controller', [
             } else {
                 $scope.classrooms[school]['classrooms_selected'][classroom] = false;
             };
-
-            // get students in class:
-            $scope.classrooms[school]['class_data'][classroom] = $resource(
-                "/api/v0/student/:uuid?classroom__name=" + classroom + "&classroom__school__name=" + school
-            ).query()
-
-            // logging:
-            var selected = $scope.classrooms[school]['classrooms_selected'][classroom] ? "selected" : "deselected";
-            console.log(school + " " + classroom + " is " + selected);
         };
     }
 ]);

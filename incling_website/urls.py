@@ -21,8 +21,8 @@ from config import API_VERSION
 
 
 router = routers.DefaultRouter()
-router.register(r'classroom', views.ClassroomViewSet)
 router.register(r'school', views.SchoolViewSet)
+router.register(r'classroom', views.ClassroomViewSet)
 router.register(r'student', views.StudentViewSet)
 
 urlpatterns = [

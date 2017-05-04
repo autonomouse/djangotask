@@ -12,7 +12,7 @@
         </div>
 
         <div class="panel-body" data-ng-show="classrooms[school_classrooms.school]['classrooms_selected'][classroom.name]">
-            <div class="container" data-ng-repeat="student in classrooms[school_classrooms.school]['class_data'][classroom.name]">
+            <div class="container" data-ng-repeat="student in classroom.students | orderBy : 'lastname'">
             {$ student.lastname $}, {$ student.firstname $} {$ student.middlenames $}
             </div>
         </div>

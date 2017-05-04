@@ -9,18 +9,18 @@ class SchoolSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('uuid', 'name', 'address')
 
 
-class ClassroomSerializer(serializers.HyperlinkedModelSerializer):
-    school = SchoolSerializer()
-
-    class Meta:
-        model = models.Classroom
-        fields = ('uuid', 'name', 'school')
-
-
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    classroom = ClassroomSerializer()
 
     class Meta:
         model = models.Student
         fields = ('uuid', 'firstname', 'middlenames', 'lastname', 'is_active',
-                  'is_suspended', 'classroom')
+                  'is_suspended')
+
+
+class ClassroomSerializer(serializers.HyperlinkedModelSerializer):
+    school = SchoolSerializer()
+    students = StudentSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = models.Classroom
+        fields = ('uuid', 'name', 'school', 'students')
