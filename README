@@ -30,7 +30,7 @@ If using the included db.sqlite3 database, the defualt DB credentials are admin/
 
 ## Caveats
 
-* I initially wrote this without notiing the part about needing to use pip install. I'm used to running things in a system container (i.e. LXC/LXD) and it was beaten into me at Canonical that apt >>> pip and to never use pip if it can be avoided. I think it should be okay, but if it doesn't run with pip install, it will work with ./do.py install
+* I initially wrote this without noticing the part about needing to use pip install. I'm used to running things in a system container (i.e. LXC/LXD) and it was beaten into me at Canonical that apt >>> pip and to never use pip if it can be avoided. I think it should be okay, but if it doesn't run with pip install, it will work with ./do.py install
 * I have not implemented any permissions at all on the API which is normally a hanging offense (but you didn't ask for them, so I tried to keep it simple)
 * It ain't exactly pretty on the front page there, but it'll do...
 
