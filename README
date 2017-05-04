@@ -12,5 +12,15 @@ Sorry, I know I'm supposed to use VirtualEnv and run using pip install, but didn
 
 I can add this later on if you like, but I figured you'd like to have the code sooner rather than later.
 
-Defualt DB credentials are admin/password123 
+
+The DRF REST API browser is available at:
+http://127.0.0.1:8000/api/v0/
+
+
+The admin page is available at:
+
+http://127.0.0.1:8000/admin/
+
+If using the included db.sqlite3 database, the defualt DB credentials are admin/password123 (If you've deleted that and are starting from scratch, you will have to run python3 manage.py createsuperuser)
+
 

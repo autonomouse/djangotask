@@ -1,0 +1,55 @@
+---
+- model: incling.school
+  pk: 990bb105-50cd-47d2-9f88-968c9a5404ef
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:16:21.081Z'
+    name: Example
+    address: ''
+- model: incling.classroom
+  pk: 4e7527da-32e5-4162-a0ed-ceb6ac8b19ad
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:16:22.173Z'
+    name: 1A
+    school: 990bb105-50cd-47d2-9f88-968c9a5404ef
+- model: incling.classroom
+  pk: bfa09137-d786-46ce-b7f8-caf8c7090e1c
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:27:20.933Z'
+    name: 1B
+    school: 990bb105-50cd-47d2-9f88-968c9a5404ef
+- model: incling.student
+  pk: 36b3eeb9-af19-4eae-a5bb-77d50e4019c6
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:20:56.112Z'
+    firstname: Suspended
+    middlenames: ''
+    lastname: Student
+    is_active: true
+    is_suspended: true
+    classroom: 4e7527da-32e5-4162-a0ed-ceb6ac8b19ad
+- model: incling.student
+  pk: 50cedc1f-8b38-4161-b106-b6afba44939a
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:27:22.872Z'
+    firstname: Darren
+    middlenames: ''
+    lastname: Person
+    is_active: true
+    is_suspended: false
+    classroom: bfa09137-d786-46ce-b7f8-caf8c7090e1c
+- model: incling.student
+  pk: 856f7d26-9030-4292-a46e-96efe158d5c5
+  fields:
+    created_at:
+    updated_at: '2017-05-04T10:16:26.112Z'
+    firstname: Darren
+    middlenames: ''
+    lastname: Hoyland
+    is_active: true
+    is_suspended: false
+    classroom: 4e7527da-32e5-4162-a0ed-ceb6ac8b19ad
