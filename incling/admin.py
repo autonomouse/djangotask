@@ -13,6 +13,7 @@ def get_obj_attribute(obj, fields):
         obj = getattr(obj, lvl)
     return obj
 
+
 def add_related_field_wrapper(form, col_name):
     """ Register models with custom settings
     """
@@ -35,6 +36,7 @@ class SchoolAdmin(admin.ModelAdmin):
     list_display = ['name', 'address']
     search_fields = ['uuid', 'name', 'address']
     ordering = ['name']
+
 
 admin.site.register(models.School, SchoolAdmin)
 
@@ -61,6 +63,7 @@ class ClassroomAdmin(admin.ModelAdmin):
     search_fields = ['uuid', 'name']
     ordering = ['name']
     form = ClassroomForm
+
 
 admin.site.register(models.Classroom, ClassroomAdmin)
 
@@ -90,6 +93,7 @@ class StudentAdmin(admin.ModelAdmin):
     search_fields = ['uuid', 'firstname', 'lastname']
     ordering = ['lastname', 'firstname']
     form = StudentForm
+
 
 admin.site.register(models.Student, StudentAdmin)
 

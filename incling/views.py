@@ -27,8 +27,8 @@ class ClassroomViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Classroom.objects.all().order_by('name')
     serializer_class = serializers.ClassroomSerializer
-    filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('uuid', 'name',  'school__name', )
+    filter_backends = (filters.DjangoFilterBackend, )
+    filter_fields = ('uuid', 'name', 'school__name', )
 
 
 class StudentViewSet(viewsets.ModelViewSet):
@@ -36,6 +36,6 @@ class StudentViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Student.objects.all().order_by('lastname', 'firstname')
     serializer_class = serializers.StudentSerializer
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filters.DjangoFilterBackend, )
     filter_fields = ('uuid', 'firstname', 'middlenames', 'lastname',
                      'is_active', 'is_suspended', 'classroom__name', )

@@ -82,14 +82,14 @@ class Student(TimeStampedBaseModel):
         default="",
         blank=False,
         null=False,
-        help_text="The student's first name", )
+        help_text="The student's first name")
     middlenames = models.CharField(
         verbose_name="Middle Names",
         max_length=30,
         default=None,
         blank=True,
         null=True,
-        help_text="The student's middle names (space separated, if multiple)", )
+        help_text="The student's middle names (space separated, if multiple)")
     lastname = models.CharField(
         verbose_name="Last Name",
         max_length=30,
@@ -99,10 +99,10 @@ class Student(TimeStampedBaseModel):
         help_text="The student's last name", )
     is_active = models.BooleanField(
         default=True,
-        help_text="True if student has not graduated, left, or been expelled.")
+        help_text="True if student has not graduated, left, or been expelled")
     is_suspended = models.BooleanField(
         default=False,
-        help_text="True if student is currently on suspension.")
+        help_text="True if student is currently on suspension")
     classroom = models.ForeignKey(
         Classroom,
         related_name='students')
